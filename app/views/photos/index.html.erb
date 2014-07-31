@@ -1,0 +1,27 @@
+<h1>My Memories!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><img src="<%= photo.photo_url %>" style="width: 150px;height: 100px;"></td>
+        <td><%= link_to 'Show', photo, :class => "btn btn-info" %></td>
+        <% if current_user.present? %>
+          <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<% if current_user.present? %>
+<%= link_to 'upload memories', new_photo_path, :class => "btn btn-primary" %>
+<% end %>
