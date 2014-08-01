@@ -16,6 +16,7 @@ gem 'flickraw'
 gem 'figaro'
 gem 'therubyracer'
 gem 'execjs'
+gem 'thin'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -44,7 +45,8 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-ruby '1.9.3'
+
+ruby '2.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

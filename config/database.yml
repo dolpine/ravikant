@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: galleydemo_development
+  database: ravikant_development
   pool: 5
   username: root
-  password: dolpine
+  password: ubuntu
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -23,16 +23,16 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: galleydemo_test
+  database: ravikant_test
   pool: 5
   username: root
-  password: dolpine
+  password: ubuntu
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: myapp_production
+  database: ravikant_production
   pool: 5
-  username: myapp
+  username: ravikant
   password:
